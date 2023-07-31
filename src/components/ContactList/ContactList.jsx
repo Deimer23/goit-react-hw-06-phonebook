@@ -22,7 +22,7 @@ const ContactList = (props)=>{
         if(listContact !== null){          
             dispatch(addStorage(listContact));
         }
-      });
+      },[]);
 
     useEffect(()=>{
         localStorage.setItem('contact', JSON.stringify(contacts));
